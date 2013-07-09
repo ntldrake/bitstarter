@@ -1,13 +1,11 @@
 
 var express = require('express');
 
-var file_content = fs.readFile('~/bitstarter/index.html', 'utf-8');
-
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
   var fs = require('fs');
-  var buf = new buffer(fs.readFileSync("index.html", "utf-8"));
+  var buf = new buffer(fs.readFileSync("index.html"), "utf-8"));
   response.send(buf.toString());
 });
 
